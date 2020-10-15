@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>简单工厂模式与工厂模式 | Hexo</title>
+  <meta name="keywords" content=" 设计模式 , 工厂模式 ">
+  <meta name="description" content="简单工厂模式与工厂模式 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="##个人简介黄星海 大学在读，目前正在学习 Java 及相关知识。 喜欢研究新兴技术和有趣项目实现的逻辑。 ##联系方式  QQ : 1191541287 邮箱 : wuchang287@qq.com">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpeg" />
@@ -419,12 +419,73 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-简单工厂模式与工厂模式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于无常鬼"><span class="toc-text">关于无常鬼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">简单工厂模式与工厂模式</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="设计模式">设计模式</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">设计模式</a>
+            
+            <a class="color5">工厂模式</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-10-13 18:44:47'>2020-09-02 09:55</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:749</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单工厂模式"><span class="toc-text">简单工厂模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-代码实现"><span class="toc-text">1.代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-心得体会"><span class="toc-text">2.心得体会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工厂方法模式"><span class="toc-text">工厂方法模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-代码实现-1"><span class="toc-text">1.代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-心得体会-1"><span class="toc-text">2.心得体会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -437,32 +498,93 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>该博客主要用于大学学习和计算机知识学习轨迹的记录。非硬核技术博客，只为记录学习历程。</p>
-<h2 id="关于无常鬼"><a href="#关于无常鬼" class="headerlink" title="关于无常鬼"></a>关于无常鬼</h2><p><strong>无常</strong> 是博主（黄星海）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>主题 <a href="https://github.com/wuchangguia/wuchangguia.github.io" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><h3 id="1-代码实现"><a href="#1-代码实现" class="headerlink" title="1.代码实现"></a>1.代码实现</h3><pre><code>-------------简单运算工厂类---------------
+   public class OperationFactory{
+    main(){
+    Operation oper = null;
+    switch (oper)
+        {
+            case &quot;+&quot;:
+                oper = new OperationAdd();        //OperationAdd()为具体的方法
+                break;
+            case &quot;-&quot;:
+                oper = new OperationSub();
+                break;
+            ......(略)
+        }
+    }
+}
+------------客户端代码------------------
+    Operation oper;
+    oper = OperationFactory.createOperate(&quot;+&quot;);
+    oper.Num1 = 1;
+    oper.Num2 = 2;
+    double result = oper.GetResult();
+</code></pre><h3 id="2-心得体会"><a href="#2-心得体会" class="headerlink" title="2.心得体会"></a>2.心得体会</h3><p>简单工厂模式分为三个结构：</p>
 <ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+<li>一为Factory类，为实现创建所有产品的内部逻辑，工厂类可以被外界直接调用，创建所用的对象。</li>
+<li>二为抽象产品类，为工厂类创建的所有产品的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象</li>
+<li>三为具体产品类，即为工厂中创建的具体对象的实例，实现所有父类的抽象方法。</li>
+</ul>
+<p>结构图如下：</p>
+<img src="/img/SimpleFactory.png" width=550 height=350>
+
+
+<p><strong>简单工厂模式优点在于工厂类中进行逻辑判断，客户端的条件判断可以动态实例化对应的类，去除了客户端与具体产品的依赖</strong></p>
+<p><strong>简单工厂模式的缺点：不符合开放-封闭原则，例如上例中若要增加平方运算，需要修改原有的工厂运算类</strong></p>
+<h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><h3 id="1-代码实现-1"><a href="#1-代码实现-1" class="headerlink" title="1.代码实现"></a>1.代码实现</h3><pre><code>-------------工厂接口----------------
+interface IFactory
+{
+    Operation CreateOperation();
+} 
+
+-------------运算工厂类--------------- 
+    class AddFactory implements IFactory{   
+        public String createOperation() {
+            return new OperationAdd();
+        }
+    }
+
+    class SubFactory implements IFactory{
+        public String createOperation() {
+            return new OperationSub();
+        }
+    }
+........(略)
+------------客户端代码------------------
+
+    IFactory operFactory = new AddFactory();
+    Operation oper = operFactory.CreateOperation();
+    oper.Num1 = 1;
+    oper.Num2 = 2;
+    double result = oper.GetResult();</code></pre><h3 id="2-心得体会-1"><a href="#2-心得体会-1" class="headerlink" title="2.心得体会"></a>2.心得体会</h3><p>工厂方法模式的结构：</p>
+<ul>
+<li>一为抽象Factory类，为所有具体工厂的父类，所有工厂必须实现该抽象类中定义的方法。</li>
+<li>二为抽象产品类，为工厂类创建的所有产品的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象</li>
+<li>三为具体产品类，即为工厂中创建的具体对象的实例，实现所有父类的抽象方法。</li>
+<li>四为具体Factory类，实现了抽象工厂的具体子类，返回一个具体产品的实例。</li>
+</ul>
+<p>结构图：</p>
+<img src="/img/Factory.png" width=550 height=350>
+
+<p><strong>工厂方法模式中子类决定实例化哪一个类，工厂方法使得每一个实例化延迟到子类</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>工厂模式是基于面向对象语言中继承、多态特性而实现的。客户端调用的时父类接口，而具体实例化是在继承该接口的子类进行的，由工厂类决定逻辑即具体为哪一个子类。** 集中封装了对象的创建。**</li>
+<li>工厂模式实现时，客户端决定实例化哪一个工厂来实现具体的产品类，将逻辑判断给转移到了客户端的代码中进行。在简单工厂中，需要添加功能，修改工厂类，而在工厂方法模式中需要修改客户端的逻辑。利用反射可以解决分支判断的问题。</li>
 </ul>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 wuchang287@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
     <div id="comments">
     <!-- 来必力City版安装代码 -->
     <div id="lv-container" data-id="city" data-uid="MTAyMC81MDY3Ni8yNzE1OQ==">
@@ -488,6 +610,13 @@
 </div>
 
 
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -496,11 +625,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

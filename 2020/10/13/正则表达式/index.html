@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>正则表达式 | Hexo</title>
+  <meta name="keywords" content=" 正则表达式 ">
+  <meta name="description" content="正则表达式 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="##个人简介黄星海 大学在读，目前正在学习 Java 及相关知识。 喜欢研究新兴技术和有趣项目实现的逻辑。 ##联系方式  QQ : 1191541287 邮箱 : wuchang287@qq.com">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpeg" />
@@ -419,12 +419,73 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于无常鬼"><span class="toc-text">关于无常鬼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">正则表达式</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工具">工具</a> > 
+            
+            <a  data-rel="工具&lt;---&gt;正则表达式">正则表达式</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">正则表达式</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2020-10-13 17:47:11'>2020-10-13 16:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:539</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#正则表达式的语法"><span class="toc-text">正则表达式的语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#普通字符"><span class="toc-text">普通字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊字符"><span class="toc-text">特殊字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#限定符"><span class="toc-text">限定符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定位符"><span class="toc-text">定位符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修饰符"><span class="toc-text">修饰符</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -437,32 +498,59 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>该博客主要用于大学学习和计算机知识学习轨迹的记录。非硬核技术博客，只为记录学习历程。</p>
-<h2 id="关于无常鬼"><a href="#关于无常鬼" class="headerlink" title="关于无常鬼"></a>关于无常鬼</h2><p><strong>无常</strong> 是博主（黄星海）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>主题 <a href="https://github.com/wuchangguia/wuchangguia.github.io" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="正则表达式的语法"><a href="#正则表达式的语法" class="headerlink" title="正则表达式的语法"></a>正则表达式的语法</h1><h2 id="普通字符"><a href="#普通字符" class="headerlink" title="普通字符"></a>普通字符</h2><ul>
+<li><code>[....]</code>  匹配[….]中的所有字符，例如<code>[abc]</code>匹配字符串’abcdef’中的<code>a</code> <code>b</code> <code>c</code>字母</li>
+<li><code>[^....]</code>  匹配除了[….]中的字符，例如<code>[^abc]</code>匹配字符串’abcdef’中的 非 <code>a</code> <code>b</code> <code>c</code>的字母</li>
+<li><code>[A-Z]</code>  表示一个区间，匹配所有的大写字母</li>
+<li><code>.</code>  匹配除了换行符<code>\r``\n</code>之外的所有字符</li>
+<li><code>[\s]</code> 匹配所有空白行  <code>[\S]</code> 匹配所有非空白行</li>
+<li><code>\w</code> ==<code>[A-Za-z0-9_]</code>匹配字母，数字下划线</li>
+</ul>
+<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p><strong>匹配特殊字符本身，需要在特殊字符前加<code>\</code>，例如匹配^符号本身，使用<code>\^</code></strong> </p>
 <ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
+<li><code>^</code> ：匹配输入字符串的开始位置，除非在方括号表达式中使用，当符号在方括号表达式中使用时，表示取非。</li>
+<li><code>￥</code>：匹配输入字符串的结尾位置</li>
+<li><code>()</code>：子表达式的开始与结尾</li>
+<li><code>?</code> ：表示匹配前面的子表达式零次或一次</li>
+<li><code>*</code> :表示匹配前面的子表达式零次或零次</li>
+<li><code>+</code> :表示匹配前面的子表达式一次或多次</li>
+<li><code>[]</code>：表示一个中括号表达式的开始与结束</li>
+<li><code>{}</code>:表示一个限定符的开始与结束</li>
+<li><code>\</code>：转义字符</li>
+<li><code>|</code>：或 运算符</li>
+</ul>
+<h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><ul>
+<li><code>?</code>  ：表示匹配前面的子表达式零次或一次</li>
+<li><code>*</code>  :表示匹配前面的子表达式零次或零次</li>
+<li><code>+</code>  :表示匹配前面的子表达式一次或多次</li>
+<li><code>{n}</code>：n为非负整数，匹配n次例如 <code>o{2}</code>不能匹配”Bob”可以匹配”food”</li>
+<li><code>{n,}</code>：表示至少匹配n次</li>
+<li><code>{n,m}</code>：表示匹配最少n次，最多m次</li>
+</ul>
+<h2 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h2><ul>
+<li><code>\b</code>：字与空格的位置，例如：<code>\babc</code>表示在开头匹配带’abc’的单词，可匹配到’abcd’不能匹配到’dabc’</li>
+<li><code>\B</code>：非单词边界匹配即为匹配单词中的字符,<code>\Babc</code>能匹配’dabcd’匹配不到’abcd’</li>
+</ul>
+<p><strong>例子</strong><br><code>/[1-9][0-9]*/</code> :表示匹配第一个数字不为0的任意长度的数字</p>
+<h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><ul>
+<li><code>g</code> :全局匹配</li>
+<li><code>i</code> :忽略大小写</li>
+<li><code>m</code> :多行匹配，g只能匹配一行，gm可以实现多行全局匹配</li>
+<li><code>s</code> :匹配换行符</li>
 </ul>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 wuchang287@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
     <div id="comments">
     <!-- 来必力City版安装代码 -->
     <div id="lv-container" data-id="city" data-uid="MTAyMC81MDY3Ni8yNzE1OQ==">
@@ -488,6 +576,13 @@
 </div>
 
 
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -496,11 +591,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 </body>

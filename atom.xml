@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-03T12:10:41.510Z</updated>
+  <updated>2020-10-13T09:47:11.270Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,121 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="http://yoursite.com/2020/10/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/10/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <published>2020-10-13T08:00:10.000Z</published>
+    <updated>2020-10-13T09:47:11.270Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="正则表达式的语法"><a href="#正则表达式的语法" class="headerlink" title="正则表达式的语法"></a>正则表达式的语法</h1><h2 id="普通字符"><a href="#普通字符" class="headerlink" title="普通字符"></a>普通字符</h2><ul><li><code>[....]</code>  匹配[….]中的所有字符，例如<code>[abc]</code>匹配字符串’abcdef’中的<code>a</code> <code>b</code> <code>c</code>字母</li><li><code>[^....]</code>  匹配除了[….]中的字符，例如<code>[^abc]</code>匹配字符串’abcdef’中的 非 <code>a</code> <code>b</code> <code>c</code>的字母</li><li><code>[A-Z]</code>  表示一个区间，匹配所有的大写字母</li><li><code>.</code>  匹配除了换行符<code>\r``\n</code>之外的所有字符</li><li><code>[\s]</code> 匹配所有空白行  <code>[\S]</code> 匹配所有非空白行</li><li><code>\w</code> ==<code>[A-Za-z0-9_]</code>匹配字母，数字下划线</li></ul><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p><strong>匹配特殊字符本身，需要在特殊字符前加<code>\</code>，例如匹配^符号本身，使用<code>\^</code></strong> </p><ul><li><code>^</code> ：匹配输入字符串的开始位置，除非在方括号表达式中使用，当符号在方括号表达式中使用时，表示取非。</li><li><code>￥</code>：匹配输入字符串的结尾位置</li><li><code>()</code>：子表达式的开始与结尾</li><li><code>?</code> ：表示匹配前面的子表达式零次或一次</li><li><code>*</code> :表示匹配前面的子表达式零次或零次</li><li><code>+</code> :表示匹配前面的子表达式一次或多次</li><li><code>[]</code>：表示一个中括号表达式的开始与结束</li><li><code>{}</code>:表示一个限定符的开始与结束</li><li><code>\</code>：转义字符</li><li><code>|</code>：或 运算符</li></ul><h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><ul><li><code>?</code>  ：表示匹配前面的子表达式零次或一次</li><li><code>*</code>  :表示匹配前面的子表达式零次或零次</li><li><code>+</code>  :表示匹配前面的子表达式一次或多次</li><li><code>{n}</code>：n为非负整数，匹配n次例如 <code>o{2}</code>不能匹配”Bob”可以匹配”food”</li><li><code>{n,}</code>：表示至少匹配n次</li><li><code>{n,m}</code>：表示匹配最少n次，最多m次</li></ul><h2 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h2><ul><li><code>\b</code>：字与空格的位置，例如：<code>\babc</code>表示在开头匹配带’abc’的单词，可匹配到’abcd’不能匹配到’dabc’</li><li><code>\B</code>：非单词边界匹配即为匹配单词中的字符,<code>\Babc</code>能匹配’dabcd’匹配不到’abcd’</li></ul><p><strong>例子</strong><br><code>/[1-9][0-9]*/</code> :表示匹配第一个数字不为0的任意长度的数字</p><h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><ul><li><code>g</code> :全局匹配</li><li><code>i</code> :忽略大小写</li><li><code>m</code> :多行匹配，g只能匹配一行，gm可以实现多行全局匹配</li><li><code>s</code> :匹配换行符</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;正则表达式的语法&quot;&gt;&lt;a href=&quot;#正则表达式的语法&quot; class=&quot;headerlink&quot; title=&quot;正则表达式的语法&quot;&gt;&lt;/a&gt;正则表达式的语法&lt;/h1&gt;&lt;h2 id=&quot;普通字符&quot;&gt;&lt;a href=&quot;#普通字符&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="正则表达式" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+    
+      <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>策略模式</title>
+    <link href="http://yoursite.com/2020/09/14/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/09/14/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-09-14T03:08:32.000Z</published>
+    <updated>2020-10-12T12:17:40.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>##策略模式</p><p>策略模式主要用于封装变化点，即封装算法部分。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##策略模式&lt;/p&gt;
+&lt;p&gt;策略模式主要用于封装变化点，即封装算法部分。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="策略模式" scheme="http://yoursite.com/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql的基本技巧</title>
+    <link href="http://yoursite.com/2020/09/05/mysql%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8A%80%E5%B7%A7/"/>
+    <id>http://yoursite.com/2020/09/05/mysql%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%8A%80%E5%B7%A7/</id>
+    <published>2020-09-05T08:33:03.000Z</published>
+    <updated>2020-10-13T13:30:07.238Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、MySQL的启动与停止"><a href="#一、MySQL的启动与停止" class="headerlink" title="一、MySQL的启动与停止"></a>一、MySQL的启动与停止</h2><ol><li>通过计算机的管理服务界面停止与启动mysql</li><li>通过管理员身份运行cmd</li></ol><pre><code> net start 服务名    net stop 服务名</code></pre><h2 id="二、MySQL服务的登录和退出"><a href="#二、MySQL服务的登录和退出" class="headerlink" title="二、MySQL服务的登录和退出"></a>二、MySQL服务的登录和退出</h2><p>方式一：mysql自带的客户端。（只限于root用户）</p><p>方式二：cmd</p><pre><code>    登录：mysql [-h主机名 -p端口号] -u用户名 -p密码    退出：exit</code></pre><h2 id="三、MySQL的常见命令"><a href="#三、MySQL的常见命令" class="headerlink" title="三、MySQL的常见命令"></a>三、MySQL的常见命令</h2><pre><code> show databases;     查看当前所有的库 use 库名;           打开指定的库 show tables;        查看当前库的所有表 show tables from 库名  察看其他库的所有表 create table 表名{        列名 列类型,        列名 列类型,        ....        列名 列类型} desc 表名;   查看表结构</code></pre><h2 id="四、MySQL"><a href="#四、MySQL" class="headerlink" title="四、MySQL"></a>四、MySQL</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、MySQL的启动与停止&quot;&gt;&lt;a href=&quot;#一、MySQL的启动与停止&quot; class=&quot;headerlink&quot; title=&quot;一、MySQL的启动与停止&quot;&gt;&lt;/a&gt;一、MySQL的启动与停止&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;通过计算机的管理服务界面停止与启动mys
+      
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单工厂模式与工厂模式</title>
+    <link href="http://yoursite.com/2020/09/02/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/09/02/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-09-02T01:55:19.000Z</published>
+    <updated>2020-10-13T10:44:47.476Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><h3 id="1-代码实现"><a href="#1-代码实现" class="headerlink" title="1.代码实现"></a>1.代码实现</h3><pre><code>-------------简单运算工厂类---------------   public class OperationFactory{    main(){    Operation oper = null;    switch (oper)        {            case &quot;+&quot;:                oper = new OperationAdd();        //OperationAdd()为具体的方法                break;            case &quot;-&quot;:                oper = new OperationSub();                break;            ......(略)        }    }}------------客户端代码------------------    Operation oper;    oper = OperationFactory.createOperate(&quot;+&quot;);    oper.Num1 = 1;    oper.Num2 = 2;    double result = oper.GetResult();</code></pre><h3 id="2-心得体会"><a href="#2-心得体会" class="headerlink" title="2.心得体会"></a>2.心得体会</h3><p>简单工厂模式分为三个结构：</p><ul><li>一为Factory类，为实现创建所有产品的内部逻辑，工厂类可以被外界直接调用，创建所用的对象。</li><li>二为抽象产品类，为工厂类创建的所有产品的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象</li><li>三为具体产品类，即为工厂中创建的具体对象的实例，实现所有父类的抽象方法。</li></ul><p>结构图如下：</p><img src="/img/SimpleFactory.png" width=550 height=350><p><strong>简单工厂模式优点在于工厂类中进行逻辑判断，客户端的条件判断可以动态实例化对应的类，去除了客户端与具体产品的依赖</strong></p><p><strong>简单工厂模式的缺点：不符合开放-封闭原则，例如上例中若要增加平方运算，需要修改原有的工厂运算类</strong></p><h2 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h2><h3 id="1-代码实现-1"><a href="#1-代码实现-1" class="headerlink" title="1.代码实现"></a>1.代码实现</h3><pre><code>-------------工厂接口----------------interface IFactory{    Operation CreateOperation();} -------------运算工厂类---------------     class AddFactory implements IFactory{           public String createOperation() {            return new OperationAdd();        }    }    class SubFactory implements IFactory{        public String createOperation() {            return new OperationSub();        }    }........(略)------------客户端代码------------------    IFactory operFactory = new AddFactory();    Operation oper = operFactory.CreateOperation();    oper.Num1 = 1;    oper.Num2 = 2;    double result = oper.GetResult();</code></pre><h3 id="2-心得体会-1"><a href="#2-心得体会-1" class="headerlink" title="2.心得体会"></a>2.心得体会</h3><p>工厂方法模式的结构：</p><ul><li>一为抽象Factory类，为所有具体工厂的父类，所有工厂必须实现该抽象类中定义的方法。</li><li>二为抽象产品类，为工厂类创建的所有产品的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象</li><li>三为具体产品类，即为工厂中创建的具体对象的实例，实现所有父类的抽象方法。</li><li>四为具体Factory类，实现了抽象工厂的具体子类，返回一个具体产品的实例。</li></ul><p>结构图：</p><img src="/img/Factory.png" width=550 height=350><p><strong>工厂方法模式中子类决定实例化哪一个类，工厂方法使得每一个实例化延迟到子类</strong></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>工厂模式是基于面向对象语言中继承、多态特性而实现的。客户端调用的时父类接口，而具体实例化是在继承该接口的子类进行的，由工厂类决定逻辑即具体为哪一个子类。** 集中封装了对象的创建。**</li><li>工厂模式实现时，客户端决定实例化哪一个工厂来实现具体的产品类，将逻辑判断给转移到了客户端的代码中进行。在简单工厂中，需要添加功能，修改工厂类，而在工厂方法模式中需要修改客户端的逻辑。利用反射可以解决分支判断的问题。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;简单工厂模式&quot;&gt;&lt;a href=&quot;#简单工厂模式&quot; class=&quot;headerlink&quot; title=&quot;简单工厂模式&quot;&gt;&lt;/a&gt;简单工厂模式&lt;/h2&gt;&lt;h3 id=&quot;1-代码实现&quot;&gt;&lt;a href=&quot;#1-代码实现&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="工厂模式" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>通过hexo创建我的博客</title>
@@ -105,6 +220,37 @@
       <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
       <category term="使用技巧" scheme="http://yoursite.com/tags/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Spring基础篇(一)</title>
+    <link href="http://yoursite.com/2020/07/02/java%E5%9F%BA%E7%A1%80%E7%AF%87(%E4%B8%80)/"/>
+    <id>http://yoursite.com/2020/07/02/java%E5%9F%BA%E7%A1%80%E7%AF%87(%E4%B8%80)/</id>
+    <published>2020-07-02T12:54:39.000Z</published>
+    <updated>2020-10-13T06:51:29.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Spring</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#Spring&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="JAVA" scheme="http://yoursite.com/categories/JAVA/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/categories/JAVA/Spring/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
     
   </entry>
   
