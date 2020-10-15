@@ -193,37 +193,6 @@
   </entry>
   
   <entry>
-    <title>Markdown语法与使用</title>
-    <link href="http://yoursite.com/2020/07/02/Markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/07/02/Markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
-    <published>2020-07-02T12:54:39.000Z</published>
-    <updated>2020-07-03T12:24:13.314Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一-使用”-”-“-“-“-”标记标题"><a href="#一-使用”-”-“-“-“-”标记标题" class="headerlink" title="一.使用”=” “-“ “#”标记标题"></a>一.使用”=” “-“ “#”标记标题</h2><ol><li>使用-和=标记标题代码如下：</li></ol><p>=表示一级标题，-表示二级标题，代码如下  </p><pre><code>一级标题=================二级标题-----------------</code></pre><ol start="2"><li>使用    #    表可以表示1-6级标题，一级标题对应一个    #    号，二级标题对应两个    #    号，依次类推，代码如下：        </li></ol><pre><code>    # 一级标题    ## 二级标题    ### 三级标题    #### 四级标题    ##### 五级标题    ###### 六级标题</code></pre><hr><h2 id="二-Markdown中段落的划分"><a href="#二-Markdown中段落的划分" class="headerlink" title="二.Markdown中段落的划分"></a>二.Markdown中段落的划分</h2><p>Markdown段落的换行是使用两个以上的空格加上回车，或在段落后使用一个空行来表示重新开始一个段落。  </p><pre><code>方法一:a段落_____b段落方法二:a段落      b段落</code></pre><hr><h2 id="三-Markdown字体"><a href="#三-Markdown字体" class="headerlink" title="三.Markdown字体"></a>三.Markdown字体</h2><p>Markdown可以使用以下几种字体: </p><pre><code>*斜体文本*   _斜体文本_**粗体文本**__粗体文本__***粗斜体文本***___粗斜体文本___</code></pre><hr><h2 id="四-分隔线"><a href="#四-分隔线" class="headerlink" title="四.分隔线"></a>四.分隔线</h2><p>在一行中使用三个以上的’*’或’-‘或’_’建立一个分割线，这行内不能有其他内容。</p><hr><pre><code>***-----________</code></pre><hr><h2 id="五-删除线"><a href="#五-删除线" class="headerlink" title="五.删除线"></a>五.删除线</h2><p>在需要画删除线的两端加上波浪线~~，此方法有时会被认为是不规范的语法。需要使用del，代码如下：</p><pre><code>~~内容~~&lt;del&gt; 我是被删除的 &lt;/del&gt;</code></pre><p>效果为：<br><del>删除线</del> （渲染不规范，’因为前端预览是js渲染的，后端输出php处理的，两者的markdown语法有差异’，<a href="https://www.jianshu.com/p/77e853b61b77" target="_blank" rel="noopener">引用简书</a>. ）<br><del> 我是被删除的内容</del>（使用del)  </p><hr><h2 id="六-下划线"><a href="#六-下划线" class="headerlink" title="六.下划线"></a>六.下划线</h2><p>通过HTML的 u 标签实现。</p><pre><code>&lt;u&gt;带下划线文本&lt;/u&gt;</code></pre><p><u>带下划线文本</u></p><hr><h2 id="七-脚注"><a href="#七-脚注" class="headerlink" title="七.脚注"></a>七.脚注</h2><p>注意 :  1.脚注 id 必须唯一<br>&ensp; &ensp; &ensp; &ensp; 2.无论脚注 id 如何起名，显示时一律标为数字，并且按出现顺序排列</p><pre><code>脚注1[^1]  脚注2[^2][^1]: 我爱学习，学习使我快乐！！！[^2]: 学海无涯！！！</code></pre><hr><h2 id="八-列表"><a href="#八-列表" class="headerlink" title="八.列表"></a>八.列表</h2><p>Markdown 支持<strong>有序</strong>列表和<strong>无序</strong>列表。  </p><p><strong>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个<strong>空格</strong>，然后再填写内容：</strong></p><pre><code>* 第一项* 第二项* 第三项+ 第一项+ 第二项+ 第三项- 第一项- 第二项- 第三项  </code></pre><p>效果如下：    </p><ul><li>第一项</li><li>第二项</li><li>第三项  </li></ul><p><strong>有序列表使用数字并加上 . 号来表示，如：</strong></p><pre><code>1. 第一项  2. 第二项3. 第三项</code></pre><p>效果如下：</p><ol><li>第一项  </li><li>第二项</li><li>第三项 </li></ol><h4 id="列表嵌套只需在子列表中的选项前面添加四个空格即可："><a href="#列表嵌套只需在子列表中的选项前面添加四个空格即可：" class="headerlink" title="列表嵌套只需在子列表中的选项前面添加四个空格即可："></a>列表嵌套只需在子列表中的选项前面添加四个空格即可：</h4><pre><code>1. 第一项：- 第一项嵌套的第一个元素- 第一项嵌套的第二个元素2. 第二项：- 第二项嵌套的第一个元素- 第二项嵌套的第二个元素</code></pre><hr><h2 id="九-区块"><a href="#九-区块" class="headerlink" title="九.区块"></a>九.区块</h2><p>Markdown 区块引用是在段落开头使用 <code>&gt;</code> 符号 ，然后后面紧跟一个空格符号，<br>区块还可以嵌套以及放入列表中，一个 <code>&gt;</code> 符号是最外层，两个 <code>&gt;</code> 符号是第一层嵌套，以此类推：<br>s<br>    &gt; 区块<br>    &gt; hi<br>    &gt; &gt;第二层<br>    * 列表<br>    &gt;列表中的区块<br>效果如下： </p><blockquote><p>区块<br>hi</p><blockquote><p>第二层</p></blockquote></blockquote><ul><li>列表<blockquote><p>列表中的区块</p></blockquote></li></ul><hr><h2 id="十-代码"><a href="#十-代码" class="headerlink" title="十.代码"></a>十.代码</h2><p><strong>代码区块</strong><br>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：  </p><pre><code> `println();`函数</code></pre><p>效果如下：<br><code>printf()</code>函数   </p><p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p><p>实例如下：  </p><pre><code class="java">    public static void main(String args[]){        System.out.print(&quot;Hello World&quot;);}</code></pre><ul><li>也可以使用```包裹一段代码。  </li><li>同时第一行反引号后面，输入代码块所使用的语言，实现代码高亮。  </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一-使用”-”-“-“-“-”标记标题&quot;&gt;&lt;a href=&quot;#一-使用”-”-“-“-“-”标记标题&quot; class=&quot;headerlink&quot; title=&quot;一.使用”=” “-“ “#”标记标题&quot;&gt;&lt;/a&gt;一.使用”=” “-“ “#”标记标题&lt;/h2&gt;&lt;ol&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Markdown" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/Markdown/"/>
-    
-    
-      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
-    
-      <category term="使用技巧" scheme="http://yoursite.com/tags/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java Spring基础篇(一)</title>
     <link href="http://yoursite.com/2020/07/02/java%E5%9F%BA%E7%A1%80%E7%AF%87(%E4%B8%80)/"/>
     <id>http://yoursite.com/2020/07/02/java%E5%9F%BA%E7%A1%80%E7%AF%87(%E4%B8%80)/</id>
@@ -251,6 +220,37 @@
       <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法与使用</title>
+    <link href="http://yoursite.com/2020/07/02/Markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/07/02/Markdown%E8%AF%AD%E6%B3%95%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2020-07-02T12:54:39.000Z</published>
+    <updated>2020-07-03T12:24:13.314Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一-使用”-”-“-“-“-”标记标题"><a href="#一-使用”-”-“-“-“-”标记标题" class="headerlink" title="一.使用”=” “-“ “#”标记标题"></a>一.使用”=” “-“ “#”标记标题</h2><ol><li>使用-和=标记标题代码如下：</li></ol><p>=表示一级标题，-表示二级标题，代码如下  </p><pre><code>一级标题=================二级标题-----------------</code></pre><ol start="2"><li>使用    #    表可以表示1-6级标题，一级标题对应一个    #    号，二级标题对应两个    #    号，依次类推，代码如下：        </li></ol><pre><code>    # 一级标题    ## 二级标题    ### 三级标题    #### 四级标题    ##### 五级标题    ###### 六级标题</code></pre><hr><h2 id="二-Markdown中段落的划分"><a href="#二-Markdown中段落的划分" class="headerlink" title="二.Markdown中段落的划分"></a>二.Markdown中段落的划分</h2><p>Markdown段落的换行是使用两个以上的空格加上回车，或在段落后使用一个空行来表示重新开始一个段落。  </p><pre><code>方法一:a段落_____b段落方法二:a段落      b段落</code></pre><hr><h2 id="三-Markdown字体"><a href="#三-Markdown字体" class="headerlink" title="三.Markdown字体"></a>三.Markdown字体</h2><p>Markdown可以使用以下几种字体: </p><pre><code>*斜体文本*   _斜体文本_**粗体文本**__粗体文本__***粗斜体文本***___粗斜体文本___</code></pre><hr><h2 id="四-分隔线"><a href="#四-分隔线" class="headerlink" title="四.分隔线"></a>四.分隔线</h2><p>在一行中使用三个以上的’*’或’-‘或’_’建立一个分割线，这行内不能有其他内容。</p><hr><pre><code>***-----________</code></pre><hr><h2 id="五-删除线"><a href="#五-删除线" class="headerlink" title="五.删除线"></a>五.删除线</h2><p>在需要画删除线的两端加上波浪线~~，此方法有时会被认为是不规范的语法。需要使用del，代码如下：</p><pre><code>~~内容~~&lt;del&gt; 我是被删除的 &lt;/del&gt;</code></pre><p>效果为：<br><del>删除线</del> （渲染不规范，’因为前端预览是js渲染的，后端输出php处理的，两者的markdown语法有差异’，<a href="https://www.jianshu.com/p/77e853b61b77" target="_blank" rel="noopener">引用简书</a>. ）<br><del> 我是被删除的内容</del>（使用del)  </p><hr><h2 id="六-下划线"><a href="#六-下划线" class="headerlink" title="六.下划线"></a>六.下划线</h2><p>通过HTML的 u 标签实现。</p><pre><code>&lt;u&gt;带下划线文本&lt;/u&gt;</code></pre><p><u>带下划线文本</u></p><hr><h2 id="七-脚注"><a href="#七-脚注" class="headerlink" title="七.脚注"></a>七.脚注</h2><p>注意 :  1.脚注 id 必须唯一<br>&ensp; &ensp; &ensp; &ensp; 2.无论脚注 id 如何起名，显示时一律标为数字，并且按出现顺序排列</p><pre><code>脚注1[^1]  脚注2[^2][^1]: 我爱学习，学习使我快乐！！！[^2]: 学海无涯！！！</code></pre><hr><h2 id="八-列表"><a href="#八-列表" class="headerlink" title="八.列表"></a>八.列表</h2><p>Markdown 支持<strong>有序</strong>列表和<strong>无序</strong>列表。  </p><p><strong>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个<strong>空格</strong>，然后再填写内容：</strong></p><pre><code>* 第一项* 第二项* 第三项+ 第一项+ 第二项+ 第三项- 第一项- 第二项- 第三项  </code></pre><p>效果如下：    </p><ul><li>第一项</li><li>第二项</li><li>第三项  </li></ul><p><strong>有序列表使用数字并加上 . 号来表示，如：</strong></p><pre><code>1. 第一项  2. 第二项3. 第三项</code></pre><p>效果如下：</p><ol><li>第一项  </li><li>第二项</li><li>第三项 </li></ol><h4 id="列表嵌套只需在子列表中的选项前面添加四个空格即可："><a href="#列表嵌套只需在子列表中的选项前面添加四个空格即可：" class="headerlink" title="列表嵌套只需在子列表中的选项前面添加四个空格即可："></a>列表嵌套只需在子列表中的选项前面添加四个空格即可：</h4><pre><code>1. 第一项：- 第一项嵌套的第一个元素- 第一项嵌套的第二个元素2. 第二项：- 第二项嵌套的第一个元素- 第二项嵌套的第二个元素</code></pre><hr><h2 id="九-区块"><a href="#九-区块" class="headerlink" title="九.区块"></a>九.区块</h2><p>Markdown 区块引用是在段落开头使用 <code>&gt;</code> 符号 ，然后后面紧跟一个空格符号，<br>区块还可以嵌套以及放入列表中，一个 <code>&gt;</code> 符号是最外层，两个 <code>&gt;</code> 符号是第一层嵌套，以此类推：<br>s<br>    &gt; 区块<br>    &gt; hi<br>    &gt; &gt;第二层<br>    * 列表<br>    &gt;列表中的区块<br>效果如下： </p><blockquote><p>区块<br>hi</p><blockquote><p>第二层</p></blockquote></blockquote><ul><li>列表<blockquote><p>列表中的区块</p></blockquote></li></ul><hr><h2 id="十-代码"><a href="#十-代码" class="headerlink" title="十.代码"></a>十.代码</h2><p><strong>代码区块</strong><br>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：  </p><pre><code> `println();`函数</code></pre><p>效果如下：<br><code>printf()</code>函数   </p><p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p><p>实例如下：  </p><pre><code class="java">    public static void main(String args[]){        System.out.print(&quot;Hello World&quot;);}</code></pre><ul><li>也可以使用```包裹一段代码。  </li><li>同时第一行反引号后面，输入代码块所使用的语言，实现代码高亮。  </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一-使用”-”-“-“-“-”标记标题&quot;&gt;&lt;a href=&quot;#一-使用”-”-“-“-“-”标记标题&quot; class=&quot;headerlink&quot; title=&quot;一.使用”=” “-“ “#”标记标题&quot;&gt;&lt;/a&gt;一.使用”=” “-“ “#”标记标题&lt;/h2&gt;&lt;ol&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/Markdown/"/>
+    
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+      <category term="使用技巧" scheme="http://yoursite.com/tags/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
